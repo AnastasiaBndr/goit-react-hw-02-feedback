@@ -3,6 +3,7 @@ import css from './Feedback.module.css';
 import Statistics from '../Statistics';
 import FeedbackOptions from '../FeedbackOptions';
 import Section from '../Section';
+import PropTypes from 'prop-types'
 
 export class Feedback extends Component {
     state = {
@@ -47,4 +48,10 @@ export class Feedback extends Component {
 
         </div>)
     }
+}
+
+Feedback.propTypes = {
+    good: PropTypes.number,
+    neutral: PropTypes.number,
+    bad: PropTypes.number,
 }
